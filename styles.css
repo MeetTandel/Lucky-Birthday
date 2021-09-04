@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap");
+:root {
+  --background-dark: #53a81a;
+  --background-light: #3adbce;
+  --black: #000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--background-dark),
+    var(--background-light)
+  );
+  color: var(--black);
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+}
+a,
+img,
+li {
+  text-decoration: none;
+  display: inline;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 400px;
+  height: 80%;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+label,
+input {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background: white;
+  font-size: large;
+  margin: 1rem 0;
+}
+
+#calculate-number {
+  background: transparent;
+  border: 2px solid black;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+  cursor: pointer;
+  outline: white;
+  margin: 0 auto;
+}
+#calculate-number:hover {
+  color: white;
+  border: 2px solid white;
+}
+
+#privacy-notice {
+  margin: 1rem auto;
+  color: rgb(209, 36, 36);
+}
+#output-container,
+#gif-container {
+  margin: 0 auto 1rem;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+footer a {
+  outline: none;
+}
+footer img {
+  margin: 0 20px;
+  width: 40px;
+}
+footer p {
+  font-size: large;
+  text-align: center;
+}
+
+.footer-list {
+  margin: 1rem;
+}
