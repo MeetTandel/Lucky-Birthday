@@ -13,10 +13,12 @@ const gifContainer = document.querySelector("#gif-container");
 
 calculateButton.addEventListener("click", () => {
   const date = dateOfBirth.value;
-  const number = luckyNumber.value;
-  if (date && number) {
+  const number = Number(luckyNumber.value);
+  if (date && number > 0) {
     const dateSum = sumOfDates(date, number);
     checkLuckyNumber(dateSum, number);
+  } else if (number < 0) {
+    showMessage("Enter positive value");
   } else {
     showMessage("Enter both values");
   }
@@ -26,7 +28,7 @@ function sumOfDates(date) {
   let sum = 0;
   date = date.replace(/-/g, "");
   for (let i in date) {
-    sum += Number(date[i]);
+    sum += date[i];
   }
   return sum;
 }
